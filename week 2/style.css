@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Nunito:ital,wght@1,200&family=Poppins&family=Source+Code+Pro:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 10px;
+    font-family: 'Fira Sans', sans-serif;
+    background-color: black;
+    position: relative;
+}
+h1{
+    padding: 10px;
+    margin-top: 2px;
+    border-style: 15px solid black;
+    border-radius: 20px;
+    background-color: rgb(6, 140, 140);
+    font-size: 40px;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 10px;
+
+}
+h2{
+    text-align: center;
+    color: white; 
+    background-color: #bb5f58;
+    /*border: border-width border-style border-color*/
+    border: 10px solid #bb5f58;
+    border-radius: 40pt;
+    
+}
+h3{
+    text-align: center;
+    font-size: 30px;
+    font-family: fantasy;
+    font-weight: 900;
+    text-shadow: 1px 1px;
+
+}
+img{
+    width: 100%;
+    align-self: auto;
+   
+}
+li{
+    list-style: none;
+    
+}
+ul{
+    border: 5px solid;
+    border-style: groove;
+    border-radius: 2em;
+    padding: 2px;
+    
+}
+p {
+    font-size: 20px;
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+section {
+    text-align: center;
+
+}
+.grid-item {
+    border: 3px solid;
+    border-radius: 20pt;
+    padding: 10px;
+    background-color: white;
+    animation-name: element;
+    animation-duration: 7s;
+}
+.grid-item:hover {
+    background-color: rgb(175, 188, 226); 
+} 
+@keyframes element {
+    from{background-color: white;}
+    to{background-color: lightgreen;}
+}
+
+/* grid with grids */
+#grid-floats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:10px;
+    margin: 10px;
+    
+}
+/* grid with flexbox */
+#grid-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px;
+  }
+  #grid-flex .grid-item{
+      flex: 20%;
+  }
+  @media (max-width: 867px) {
+    #grid-flex .grid-item {
+      flex: 50%;
+    }
+}
+    @media (max-width: 480px) {
+        #grid-flex .grid-item {
+          flex: 30%;
+        }
+    }
